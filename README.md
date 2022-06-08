@@ -1,2 +1,0 @@
-# webslides
-webslide-presentations
