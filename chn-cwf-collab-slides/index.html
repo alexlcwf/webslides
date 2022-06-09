@@ -15,21 +15,48 @@
             <!-- Slide 1 -->
             <section>
                 <span class="background" style="background-image:url('img/CWFLogo2014-EngRGB [Converted].png')"></span>
-                <div class="wrap">
-                    <h1><strong>Data Model</strong></h1>
-                    <div class="grid horizontal-align">
-                        <div class="column">
-                            <h2><strong>CHyF-1</strong></h2>
-                            <p>
-                                <img src="img/chyf2_flowpath.png" alt="">
-                            </p>
-                        </div>
-                        <div class="column">
-                            <h2><strong>CHyF-2</strong></h2>
-                            <p>
-                                <img src="img/chyf2_catchment.png" alt="">
-                            </p>
-                        </div>
+                <div class="wrap size-50 alignleft">
+                    <h1><strong>CHyF-2 Data Model & Tools</strong></h1>
+                    <p class="text-intro">The following changes were made to the original CHyF data model and processing tools to serve the purposes of CWF and engaged stakeholders.</p>
+                    <div class="bg-white shadow">
+                        <ul class="flexblock reasons">
+                            <li>
+                                <h2>Attribute Tables</h2>
+                                <p>
+                                    New attribute tables for EFlowpaths and ECatchments.
+                                </p>
+                            </li>
+                            <li>
+                                <h2>Definitions</h2>
+                                <p>
+                                    Updated definitions for EFlowpath and ECatchment types and subtypes.
+                                </p>
+                            </li>
+                            <li>
+                                <h2>Toponyms</h2>
+                                <p>
+                                    New names table to track and carry NHN river, stream, and waterbody names through CHyF processing.
+                                </p>
+                            </li>
+                            <li>
+                                <h2>Complex Drainage</h2>
+                                <p>
+                                    The processing tools were updated to accomodate complex drainage patterns where a network or subnetwork has multiple sinks.
+                                </p>
+                            </li>
+                            <li>
+                                <h2>Database Processing</h2>
+                                <p>
+                                    Processing tools now run directly in the CHyF database.
+                                </p>
+                            </li>
+                            <li>
+                                <h2>Automated QA/QC</h2>
+                                <p>
+                                    Scripts were developed to automate a series of qa/qc checks on the input data during pre-processing.
+                                </p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -58,11 +85,42 @@
             <!-- Slide 3 -->
             <section>
                 <span class="background" style="background-image:url('img/CWFLogo2014-EngRGB [Converted].png')"></span>
-                <div class="wrap">
-                    <h1><strong>Data Processing Timeline</strong></h1>
-                    <p>
-                        This slide will comtain a timeline graphic showing our release schedule, as well as some quick points for average processing times. Note that we are implementing a system to take advantage of increase processing power on the office "super computer" which is expected to increase efficiency. 
-                    </p>
+                <div class="wrap size-50 alignleft">
+                    <h1><strong>Network Processing Estimates</strong></h1>
+                    <div class="bg-white shadow">
+                        <ul class="flexblock reasons">
+                            <li>
+                                <h2>Work Unit Processing</h2>
+                                <p>
+                                    On average, a single NHN work unit is processed (Flowpath Constructor tools) from start to finish in roughly one hour.
+                                </p>
+                            </li>
+                            <li>
+                                <h2>Province/Territory Estimates</h2>
+                                <p>
+                                    Atlantic Canada	  - 145.25 hrs
+                                </p>
+                                <p>    
+                                    British Columbi   -	260.25 hrs
+                                </p>
+                                <p>    
+                                    Ontario	          - 154.25 hrs
+                                </p>
+                                <p>
+                                    Quebec	          - 231.25 hrs
+                                </p>    
+                                <p>    
+                                    Saskatchewan	  - 105.25 hrs
+                                </p>
+                                <p>   
+                                    Manitoba	      - 106.25 hrs
+                                </p> 
+                                <p>   
+                                    Territories	      - 313.25 hrs
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <!-- Slide 4 -->
@@ -90,20 +148,28 @@
             <!-- Slide 5 -->
             <section>
                 <span class="background" style="background-image:url('img/CWFLogo2014-EngRGB [Converted].png')"></span>
-                <div class="wrap">
-                    <h1><strong>Exporting Hygraphs</strong></h1>
-                    <p>
-                        This slide will cover details related to our current process on exporting hygraphs from the database. Currently a query we run in postgres but looking to implement a process to export hygraphs through the web mapping tool (include link or snapshot of the data downloads window for context?) 
-                    </p>
-                </div>
+                    <div class="grid vertical-align">
+                        <div class="column">
+                        <h1><strong>Exporting Hygraphs</strong></h1>
+                            <p>
+                                Hydro networks may be exported from the database in hygraph format using an SQL query. 
+                                Future development plans for hygraph export to be accessible through the 'Download Data' tab of the CABD web mapping tool.
+                            </p>
+                        </div>
+                        <div class="column">
+                            <pre><span class="code-comment">--flowpaths WITH order properties</span><span class="code-comment" style="color:#CC7F4D">"C:\\...\bin\\ogr2ogr.exe" </span>-f GPKG chyf_export.gpkg -nln flowpath PG:"dbname=<span class="code-comment" style="color:#CC7F4D">'xxxx'</span> host=<span class="code-comment" style="color:#CC7F4D">'xxxx'</span> port=<span class="code-comment" style="color:#CC7F4D">'xxxx'</span> user='<span class="code-comment" style="color:#CC7F4D">xxxx'</span> <span class="code-comment" style="color:#CC7F4D"></span>password</span>=<span class="code-comment" style="color:#3b8dda">'xxxx'" -sql "</span><span class="code-comment" style="color:#3b8dda">select</span> a.id, a.ef_type, ef.name <span class="code-comment" style="color:#3b8dda">as</span> ef_type_name, a.ef_subtype, efsub.name <span class="code-comment" style="color:#3b8dda">as</span> ef_subtype_name, a.rank, a.length, a.name_id, name.name_en, name.name_fr, a.aoi_id, aoi.short_name <span class="code-comment" style="color:#3b8dda">as</span> aoi_name, a.from_nexus_id <span class="code-comment" style="color:#3b8dda">as</span> from_nexus_id, a.to_nexus_id <span class="code-comment" style="color:#3b8dda">as</span> to_nexus_id, a.geometry, ep.graph_id,  ep.strahler_order, ep.hack_order, ep.horton_order, ep.shreve_order, ep.mainstem_id, ep.mainstem_seq  from chyf2.eflowpath a left join chyf2.ef_type_codes ef <span class="code-comment" style="color:#3b8dda">on</span> ef.code = a.ef_type <span class="code-comment" style="color:#3b8dda">left join</span> chyf2.ef_subtype_codes efsub <span class="code-comment" style="color:#3b8dda">on</span> efsub.code = a.ef_subtype <span class="code-comment" style="color:#3b8dda">left join</span> chyf2.names <span class="code-comment" style="color:#3b8dda">name on name</span>.name_id = a.name_id <span class="code-comment" style="color:#3b8dda">left join</span> chyf2.aoi aoi <span class="code-comment" style="color:#3b8dda">on</span> aoi.id = a.aoi_id <span class="code-comment" style="color:#3b8dda">left join</span> chyf2.eflowpath_properties ep <span class="code-comment" style="color:#3b8dda">on</span> ep.id = a.id <span class="code-comment" style="color:#3b8dda">where</span> aoi.short_name = 'xxxx'"
+                            </pre>
+                        </div>
+                    </div>
             </section>
             <!-- Slide 6 -->
             <section>
                 <span class="background" style="background-image:url('img/CWFLogo2014-EngRGB [Converted].png')"></span>
                 <div class="wrap">
-                    <h1><strong>Release Schedule</strong></h1>
-                    <p style="line-height:3em">
-                        Barrier features (dams + waterfalls) and fishways are currently being processed with national coverage anticipated by July 2022. Stream crossings
+                    <h1><strong>Feature Data</strong></h1>
+                    <h3><strong>Release Schedule</strong></h3>
+                    <p style="line-height:2em">
+                        Barrier features (dams + waterfalls) and fishways are currently being processed with national coverage anticipated by July 2022. Data modelling and acquisition for stream crossings will begin in summer 2022 and data is anticipated to be released for two provinces by April 2023.
                     </p>
                     <p>
                         <img src="img/data_release_timeline.png" alt="" style="box-shadow: 2px 2px 20px 2px grey; padding:2em;">
@@ -121,7 +187,7 @@
                                 <div class="column">
                                         <h2 style="text-align:center; font-size: 150%;">Dams</h2>
                                     <p style="text-align:center; color: #BF5943; font-weight: bold; line-height: 2em;">
-                                        +30,000
+                                        +35,000
                                         <img src="img/dam.svg" alt="" style="width:100%">
                                     </p>
                                 </div>
