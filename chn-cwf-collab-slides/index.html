@@ -21,7 +21,7 @@
                         </div>
                         <div class="column">
                             <div class="flex-content">
-                                <ul class="flexblock specs">
+                                <ul class="flexblock specs" style="font-size:1.15em">
                                     <li>
                                         One of Canada’s largest environmental NGOs.
                                     </li>
@@ -42,7 +42,7 @@
                 <span class="background" style="background-image:url('img/salmon2.png'); background-size:cover; margin:0px;"></span>
                 <div class="wrap size-50 bg-light" style="background:rgba(255, 255, 255, 0.9)">
                 <h4><strong>National Fish Passage Program</strong></h4>
-                <p>An increased focus on connectivity and fish passage:</p>
+                <p style="font-size:1.15em">An increased focus on connectivity and fish passage:</p>
                     <li style="font-size:1.15em;">
                     Chinook salmon research in Upper Yukon River.
                     </li>
@@ -100,23 +100,23 @@
                 <div class="wrap">
                 <h2><strong>CABD Components</strong></h2>
                 <div class="grid align-vertical">
-                    <div class="column">
+                    <div class="column" style="margin-top:5%">
                         <div class="bg-white shadow">
                         <ul class="flexblock reasons">
-                            <li>
+                            <li style="font-size:1.15em">
                                 Hydrographic network (analysis ready)
                             </li>
-                            <li>
+                            <li style="font-size:1.15em">
                                 Barrier data
                             </li>
-                            <li>
+                            <li style="font-size:1.15em">
                                 Web map and tools
                             </li>
                         </ul>
                         </div>
                     </div>
                     <div class="column">
-                        <img src="img/network.png" alt="" style="width:275px; margin: 0% 0% 0% 30%">
+                        <img src="img/network.png" alt="" style="width:500px; margin: 0% 0% 0% 10%">
                     </div>
                     </div>
                 </div>
@@ -155,32 +155,50 @@
             <section>
                 <span class="background" style="background-image:url('img/CWFLogo2014-EngRGB [Converted].png')"></span>
                 <div class="wrap">
-                    <h1><strong>CHyF-2 Data Model</strong></h1>
-                    <p class="text-intro" style="font-size:120%">The following changes were made to the original CHyF data model and processing tools to serve the purposes of CWF and engaged stakeholders.</p>
-                    <div class="grid vertical-align">
-                        <div class="bg-white shadow">
-                        <ul class="flexblock">
-                            <li>
-                                <h2>Attribute Tables</h2>
-                                <p>
-                                    New attribute tables for EFlowpaths and ECatchments.
-                                </p>
-                            </li>
-                            <li>
-                                <h2>Definitions</h2>
-                                <p>
-                                    Updated definitions for EFlowpath and ECatchment types and subtypes.
-                                </p>
-                            </li>
-                            <li>
-                                <h2>Toponyms</h2>
-                                <p>
-                                    New names table to track and carry NHN river, stream, and waterbody names through CHyF processing.
-                                </p>
-                            </li>
-                        </ul>
-                        </div>
-                    </div>
+                    <h2><strong>CHyF-2 Data Model</strong></h2>
+                    <p class="text-intro" style="font-size:1.15em;">Changes were made to the original CHyF data model and processing tools to serve the purposes of CWF and engaged stakeholders.</p>
+                    <ul class="description" style="font-size:1.15em;">
+                        <li>
+                            <div class="grid sm">
+                                <div class="column" style="margin:0">
+                                    <h4><strong>New Accessory Attributes</strong></h4>
+                                    <p>Distinct accessory attribute tables for EFlowpath and ECatchment feature types allow users to add or remove custom attributes, making it easy to adapt the data based on individual needs.</p>
+                                </div>
+                                <div class="column">
+                                    <h5>EFlowpaths</h5>
+                                    <p>ef_type & subtype | 
+                                    stream/river name | 
+                                    stream order (x4) | 
+                                    gradient | 
+                                    permanency | 
+                                    stream temp | 
+                                    functional & total kms | 
+                                    barrier ids | 
+                                    catchment area | 
+                                    + custom</p>
+                                    <h5>ECatchments</h5>
+                                    <p>ec_type & subtype | 
+                                    waterbody name | 
+                                    reservoir name | 
+                                    min elevation | 
+                                    max elevation | 
+                                    mean elevation</p>                                
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-left:2%;">
+                            <div>
+                                <h4><strong>Updated Attribute Definitions</strong></h4>
+                                <p>Updated definitions for EFlowpath and ECatchment types and subtypes.</p>
+                            </div>
+                        </li>
+                        <li style="margin-left:2%;">
+                            <div>
+                                <h4><strong>Retaining Hydrographic Names</strong></h4>
+                                <p>New names table to track and carry NHN river, stream, and waterbody names through CHyF processing. Linked to CGNDB.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <!-- Slide -->
@@ -191,25 +209,25 @@
                     <p class="text-intro" style="font-size:120%">The following changes were made to the original CHyF processing tools.</p>
                     <div class="bg-white shadow">
                         <ul class="flexblock reasons">
-                            <li>
+                            <li style="font-size:1.15em">
                                 <h2>Complex Drainage</h2>
                                 <p>
                                     The processing tools were updated to accomodate complex drainage patterns where a network or subnetwork has multiple sinks.
                                 </p>
                             </li>
-                            <li>
+                            <li style="font-size:1.15em">
                                 <h2>Database Processing</h2>
                                 <p>
                                     Processing tools now run directly in the CHyF database.
                                 </p>
                             </li>
-                            <li>
+                            <li style="font-size:1.15em">
                                 <h2>Automated QA/QC</h2>
                                 <p>
                                     Scripts were developed to automate a series of qa/qc checks on the input data during pre-processing.
                                 </p>
                             </li>
-                            <li>
+                            <li style="font-size:1.15em">
                                 <h2>Parallelized Server Processing</h2>
                                 <p>
                                     Investing in parallelized server processing to improve processing capacity and efficiency.
@@ -226,7 +244,7 @@
                     <div class="grid vertical-align">
                         <div class="column">
                             <h2><strong>Processing Workflow</strong></h2>
-                            <p>
+                            <p style="font-size:1.15em">
                                 The process outlined by this workflow is used to convert NHN hydro network data to the new CHyF-2 data model.
                             </p>
                             <p>
@@ -244,41 +262,30 @@
             <!-- Slide 3 -->
             <section>
                 <span class="background" style="background-image:url('img/CWFLogo2014-EngRGB [Converted].png')"></span>
-                    <h2><strong>Network Processing Estimates</strong></h2>
-                    <div class="bg-white shadow">
-                        <ul class="flexblock reasons">
-                            <li>
-                                <h2>Work Unit Processing</h2>
-                                <p>
-                                    On average, a single NHN work unit is processed (Flowpath Constructor tools) from start to finish in roughly one hour.
-                                    ...
-                                </p>
+                    <p></p>
+                    <div class="wrap">
+                        <h2><strong>Network Processing Estimates</strong></h2>
+                        <ul class="flexblock features">
+                            <li style="font-size:1.15em">
+                                <div>
+                                    <h2>Work Unit</h2>
+                                    On average, a single NHN work unit is processed (Flowpath Constructor tools) from start to finish in roughly one hour.                            
+                                </div>
                             </li>
-                            <li>
-                                <h2>Province/Territory Estimates</h2>
-                                <p>
-                                    Atlantic Canada	  - 145.25 hrs
-                                </p>
-                                <p>    
-                                    British Columbia  -	260.25 hrs
-                                </p>
-                                <p>    
-                                    Ontario	          - 154.25 hrs
-                                </p>
-                                <p>
-                                    Quebec	          - 231.25 hrs
-                                </p>    
-                                <p>    
-                                    Saskatchewan	  - 105.25 hrs
-                                </p>
-                                <p>   
-                                    Manitoba	      - 106.25 hrs
-                                </p> 
-                                <p>   
-                                    Territories	      - 313.25 hrs
-                                </p>
+                            <li style="font-size:1.15em">
+                                <div>
+                                    <h2>Province/Territory</h2>
+                                    Atlantic Canada	- 145.25 hrs
+                                    <p>British Columbia - 260.25 hrs</p>
+                                    <p>Ontario - 154.25 hrs</p>
+                                    <p>Quebec - 231.25 hrs</p>
+                                    <p>Saskatchewan	- 105.25 hrs</p>
+                                    <p>Manitoba	- 106.25 hrs</p>
+                                    <p>Territories - 313.25 hrs</p>
                             </li>
-                        </ul>
+                                </div>
+                            </li>
+                        </ul> 
                     </div>
                 </div>
             </section>
@@ -289,7 +296,7 @@
                     <div class="grid vertical-align">
                         <div class="column">
                             <h2><strong>Vector Tile Service</strong></h2>
-                            <p>
+                            <p style="font-size:1.15em">
                                 The chyf-web vector tile service serves four features to the front-end client: two water features (single line streams and polygonal waterbodies), drainage catchments, and NHN work unit boundaries.
                             </p>
                             <p>
@@ -310,7 +317,7 @@
                     <div class="grid vertical-align">
                         <div class="column">
                         <h2><strong>Exporting Hygraphs</strong></h2>
-                            <p>
+                            <p style="font-size:1.15em">
                                 Hydro networks can be exported from the database in hygraph format using an SQL query. 
                                 Development planned for the 2022/23 fiscal year includes improving the accessibility of hygraphs, allowing users to download data in this format via the CABD web mapping tool.
                             </p>
@@ -321,14 +328,41 @@
                         </div>
                     </div>
             </section>
-            <!--Slide-->
+            <!-- Slide -->
             <section>
                 <span class="background" style="background-image:url('img/CWFLogo2014-EngRGB [Converted].png')"></span>
                 <div class="wrap">
-                    <p>
-                        wrap up slide detailing when we plan to have hydro networks completed for all of canada. Add we are also interested in catchment stuff - breaking catchments etc (were thinking about investing in that but if it's on their radar to develop that work, we won't)
-                        Also that we have barrier data they can potentially link to in the future. Also mention developing the web services to support real time processing is something we are also doing.
-                    </p>
+                    <h2><strong>Future Development and Considerations</strong></h2>
+                    <p></p>
+                    <div class="bg-white shadow">
+                        <ul class="flexblock reasons">
+                            <li style="font-size:1.15em">
+                                <h2>Complete Coverage</h2>
+                                <p>
+                                    National coverage for analysis ready hydro networks by early 2023.
+                                </p>
+                            </li>
+                            <li style="font-size:1.15em">
+                                <h2>Investing in Catchments</h2>
+                                <p>
+                                    Further the development of the catchment delineation tools (e.g., ability to break catchments to facilitate up- and downstream tracing from a barrier point).
+                                </p>
+                            </li>
+                            <li style="font-size:1.15em">
+                                <h2>ChyF Services Update</h2>
+                                <p>
+                                    Update CHyF web services to support real time in-browser processing.
+                                </p>
+                            </li>
+                            <li style="font-size:1.15em">
+                                <h2>Linkable Data</h2>
+                                <p>
+                                    Barrier data will be openly available with the ability to link to other hydrographic data.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <!--Slide 6-->
             <section>
@@ -373,7 +407,7 @@
                 <div class="wrap">
                     <h2><strong>Barrier Data</strong></h2>
                     <h3><strong>Release Schedule</strong></h3>
-                    <p style="line-height:2em">
+                    <p  style="font-size:1.15em">
                         Barrier features (dams + waterfalls) and fishways are currently being processed with national coverage anticipated by July 2022. Data modelling and acquisition for stream crossings will begin in summer 2022 and data is anticipated to be released for two provinces by April 2023.
                     </p>
                     <p>
