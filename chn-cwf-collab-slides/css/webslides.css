@@ -3284,7 +3284,7 @@ figure[class*='text-pull-'] {
 
 /* -- Context  -- */
 [class*='bg-'] .text-context:before {
-  background-color: #fff; }
+  background-color: black; }
 
 .text-context:before,
 .bg-white .text-context:before {
