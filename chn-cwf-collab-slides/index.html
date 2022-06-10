@@ -160,15 +160,13 @@
                     <ul class="description" style="font-size:1.15em;">
                         <li>
                             <div class="grid sm">
-                                <div class="column" style="margin:0">
+                                <div class="column">
                                     <h4><strong>New Accessory Attributes</strong></h4>
                                     <p>Distinct accessory attribute tables for EFlowpath and ECatchment feature types allow users to add or remove custom attributes, making it easy to adapt the data based on individual needs.</p>
                                 </div>
                                 <div class="column">
                                     <h5>EFlowpaths</h5>
-                                    <p>ef_type & subtype | 
-                                    stream/river name | 
-                                    stream order (x4) | 
+                                    <p>stream order (x4) | 
                                     gradient | 
                                     permanency | 
                                     stream temp | 
@@ -177,12 +175,10 @@
                                     catchment area | 
                                     + custom</p>
                                     <h5>ECatchments</h5>
-                                    <p>ec_type & subtype | 
-                                    waterbody name | 
-                                    reservoir name | 
-                                    min elevation | 
+                                    <p>min elevation | 
                                     max elevation | 
-                                    mean elevation</p>                                
+                                    mean elevation | 
+                                    + custom</p>                                
                                 </div>
                             </div>
                         </li>
@@ -319,7 +315,7 @@
                         <h2><strong>Exporting Hygraphs</strong></h2>
                             <p style="font-size:1.15em">
                                 Hydro networks can be exported from the database in hygraph format using an SQL query. 
-                                Development planned for the 2022/23 fiscal year includes improving the accessibility of hygraphs, allowing users to download data in this format via the CABD web mapping tool.
+                                Development planned for the 2022/23 fiscal year includes improving the accessibility of hygraphs by allowing users to download the data via the CABD web mapping tool, or access it through an API call.
                             </p>
                         </div>
                         <div class="column">
@@ -332,7 +328,7 @@
             <section>
                 <span class="background" style="background-image:url('img/CWFLogo2014-EngRGB [Converted].png')"></span>
                 <div class="wrap">
-                    <h2><strong>Future Development and Considerations</strong></h2>
+                    <h2><strong>Current Plans</strong></h2>
                     <p></p>
                     <div class="bg-white shadow">
                         <ul class="flexblock reasons">
@@ -413,6 +409,38 @@
                     <p>
                         <img src="img/data_release_timeline.png" alt="" style="box-shadow: 2px 2px 20px 2px grey; padding:2em;">
                     </p>
+                </div>
+            </section>
+            <!-- Slide -->
+            <section>
+                <span class="background" style="background-image:url('img/CWFLogo2014-EngRGB [Converted].png')"></span>
+                <div class="wrap">
+                    <h2><strong>Possible Opportunities for Collaboration</strong></h2>
+                    <p class="text-intro" style="font-size:120%">The following changes were made to the original CHyF processing tools.</p>
+                    <div class="bg-white shadow">
+                        <ul class="flexblock reasons">
+                            <li style="font-size:1.15em">
+                                <p>
+                                    Merging hydro network data structures.
+                                </p>
+                            </li>
+                            <li style="font-size:1.15em">
+                                <p>
+                                    Sharing database and API architecture.
+                                </p>
+                            </li>
+                            <li style="font-size:1.15em">
+                                <p>
+                                    Supplement high-resolution DEM data with processed hydro networks.
+                                </p>
+                            </li>
+                            <li style="font-size:1.15em">
+                                <p>
+                                    Linking CABD data to CHN.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <!-- Slide -->
